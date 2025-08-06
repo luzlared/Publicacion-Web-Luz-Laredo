@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<!-- saved from url=(0023)https://localhost:7114/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - PublicacionWeb_LL</title>
+    <link rel="stylesheet" href="./Publicacion_Web_LL_files/bootstrap.min.css">
+    <link rel="stylesheet" href="./Publicacion_Web_LL_files/site.css">
+    <link rel="stylesheet" href="./Publicacion_Web_LL_files/LL_Publicacion_Web.styles.css">
+</head>
+<body>
+    <header b-6yvkpzodar="">
+        <nav b-6yvkpzodar="" class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div b-6yvkpzodar="" class="container justify-content-center">
+                <div b-6yvkpzodar="" class="w-100 text-center">
+                    <span b-6yvkpzodar="" class="navbar-brand mx-auto">🌸 Publicación Web 🌸</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div b-6yvkpzodar="" class="container">
+        <main b-6yvkpzodar="" role="main" class="pb-3">
+            
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h2 class="text-center mb-4">Inicia Sesión</h2>
+
+                <!-- Mensaje de error -->
+                <div id="errorMessage" class="alert alert-danger text-center d-none">
+                    Correo o contraseña incorrectos
+                </div>
+
+                <!-- Formulario de login -->
+                <form id="loginForm">
+                    <div class="form-group mb-3">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" class="form-control" id="email" required="">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="password">Contraseña</label>
+                        <input type="password" class="form-control" id="password" required="">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+                </form>
+
+                <!-- Mensaje de bienvenida -->
+                <div id="welcomeMessage" class="mt-5 p-4 rounded text-center d-none" style="background-color: #ffe6f0; border: 2px solid #ff69b4;">
+                    <h4 class="mb-3">🌸 ¡Inicio de sesión exitoso!</h4>
+                    <p>Bienvenida, <strong id="userEmail"></strong></p>
+                    <button onclick="location.reload()" class="btn btn-outline-secondary mt-3">🔙 Atrás</button>
+                </div>
+
+                <!-- Datos de prueba -->
+                <div class="mt-4 p-3 rounded" style="background-color: #fff0f5; border: 1px solid #d63384;">
+                    <h6 class="text-center text-muted">✨ Usuario de prueba ✨</h6>
+                    <p class="mb-1"><strong>Correo:</strong> user@gmail.com</p>
+                    <p><strong>Contraseña:</strong> contraseña</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT FUNCIONAL -->
+    <script>
+        const form = document.getElementById("loginForm");
+        const error = document.getElementById("errorMessage");
+        const welcome = document.getElementById("welcomeMessage");
+        const emailField = document.getElementById("email");
+        const passwordField = document.getElementById("password");
+        const userEmail = document.getElementById("userEmail");
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault(); // Evita que recargue la página
+
+          const email = emailField.value.trim();
+          const password = passwordField.value.trim();
+
+          // Simulación de login
+          if (email === "user@gmail.com" && password === "contraseña") {
+            form.classList.add("d-none");
+            error.classList.add("d-none");
+            userEmail.textContent = email;
+            welcome.classList.remove("d-none");
+          } else {
+            error.classList.remove("d-none");
+          }
+        });
+    </script>
+
+
+        </main>
+    </div>
+
+    <footer b-6yvkpzodar="" class="border-top footer text-muted">
+        <div b-6yvkpzodar="" class="container">
+            © 2025 - Publicacion Web - Luz Laredo
+        </div>
+    </footer>
+
+    <script src="./Publicacion_Web_LL_files/jquery.min.js.descarga"></script>
+    <script src="./Publicacion_Web_LL_files/bootstrap.bundle.min.js.descarga"></script>
+    <script src="./Publicacion_Web_LL_files/site.js.descarga"></script>
+
+    
+
+<!-- Visual Studio Browser Link -->
+<script type="text/javascript" src="./Publicacion_Web_LL_files/browserLink" async="async" id="__browserLink_initializationData" data-requestid="b0876c4a795a4d2883eaa220e5ff9aec" data-requestmappingfromserver="false" data-connecturl="http://localhost:62913/e680d6d103d94f4d93a36cab0be2a829/browserLink"></script>
+<!-- End Browser Link -->
+<script src="./Publicacion_Web_LL_files/aspnetcore-browser-refresh.js.descarga"></script>
+</body></html>
